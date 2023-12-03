@@ -36,7 +36,6 @@ async def send_message(message: types.Message):
                         headers=headers)
 
 		data = json.loads(response.text)
-		print(data["headline"])
 		completion = openai.ChatCompletion.create(
 		  model = 'gpt-4',
 		  messages = [
